@@ -1,0 +1,66 @@
+/* Set the entire page layout to cover the viewport without scrolling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Center and make video responsive */
+#videoOverlay {
+  position:relative;
+  top: 0; /* Align the video to the top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+/* Canvas styles for sticking at the top */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* Main container for layout */
+.container {
+  display: wrap;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100vh;
+  width: 100vw;
+  position: relative; /* Allows absolute positioning inside */
+}
+
+.additionalContent {
+  display: flex-start;
+
+  align-items: center; /* Align image and text vertically */
+  gap: 10px; /* Space between image and text */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+.contentImage {
+  max-width: 900px; /* Limit image size */
+  height: auto;
+  object-fit: contain;
+  display: flex-start;
+
+}
+
+/* Styling for the text next to the image */
+.contentText {
+ display: flex-start;
+  font-size: 4rem;
+  color: #333;
+
+}
+
